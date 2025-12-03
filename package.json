@@ -37,6 +37,8 @@
   },
   "homepage": "https://github.com/AbhilashReddy1519/acquisitions#readme",
   "dependencies": {
+    "@arcjet/inspect": "^1.0.0-beta.15",
+    "@arcjet/node": "^1.0.0-beta.15",
     "@neondatabase/serverless": "^1.0.2",
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",

@@ -8,6 +8,7 @@ import cookieParser from 'cookie-parser';
 
 import logger from '#config/logger.js';
 import authRoutes from '#routes/auth.route.js';
+import securityMiddleware from '#middlewares/security.middleware.js';
 
 const app = express();
 
@@ -22,6 +23,8 @@ app.use(cookieParser());
 app.use(
   morgan('combined', { stream: { write: msg => logger.info(msg.trim()) } })
 );
+
+app.use(securityMiddleware);
 
 app.get('/', (req, res) => {
   logger.info('Hello from Acquisitions');
